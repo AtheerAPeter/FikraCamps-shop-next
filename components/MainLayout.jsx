@@ -2,7 +2,6 @@ import { PageHeader, Popover, Avatar, Button } from "antd";
 import { useRouter } from "next/router";
 import { UserOutlined } from "@ant-design/icons";
 import Cookies from "js-cookie";
-
 const MainLayout = ({ children, title, subTitle, hasBack }) => {
   const Router = useRouter();
   const handleLogout = async () => {
