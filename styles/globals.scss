@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  p {
+    margin: 0;
+  }
 }
 
 $main: #18ebb6;
@@ -16,6 +19,12 @@ $lightText: #bdbdbd;
 
 body {
   height: 100vh;
+}
+
+.container {
+  padding-top: 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .login-container {
@@ -89,6 +98,10 @@ body {
             filter: brightness(0.9);
           }
         }
+
+        .submit-btn {
+          height: 45px;
+        }
         .forgot-link {
           align-self: center;
           color: $main;
@@ -115,4 +128,113 @@ body {
 }
 .ant-page-header-heading-extra {
   cursor: pointer;
+}
+
+.links-container {
+  display: flex;
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .sign-up-link {
+    color: $main;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+.home-content {
+  height: calc(100vh - 80px);
+  @include center();
+  gap: 50px;
+  flex-wrap: wrap;
+  .category-card {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+
+    max-height: 330px;
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    img {
+      align-self: center;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+    .card-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .card-date {
+      font-size: 14px;
+      color: $lightText;
+    }
+    .card-price {
+      color: $main;
+      font-weight: bold;
+      font-size: 18px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.single-content {
+  display: flex;
+  flex-direction: column;
+  .image-wrapper {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    align-self: center;
+    .sp-img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    .price {
+      position: absolute;
+      color: $main;
+      font-size: 30px;
+      top: 0;
+      right: 20%;
+
+      padding: 2px 15px;
+      border-radius: 10px;
+      border: 2px solid $main;
+    }
+  }
+  .sp-description {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  .name-warranty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sp-name {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .sp-war {
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
 }

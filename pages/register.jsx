@@ -2,6 +2,7 @@ import Cookies from "js-cookie";
 import { useState } from "react";
 import { ApiLogin, ApiOtp, ApiRegister } from "../api";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const register = () => {
   const Router = useRouter();
@@ -66,6 +67,15 @@ const register = () => {
                 type="password"
               />
               <button type="submit">Sign Up</button>
+              <div
+                className="links-container"
+                style={{ marginTop: 10, alignSelf: "center" }}
+              >
+                <p>Already have an account?</p>
+                <Link href="/login">
+                  <p className="sign-up-link">Login</p>
+                </Link>
+              </div>
             </form>
           ) : (
             <form onSubmit={handleOtp}>

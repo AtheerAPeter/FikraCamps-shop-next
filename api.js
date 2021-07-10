@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 
-const URL = "https://shop-fc2021.herokuapp.com/v1";
+export const URL = "https://shop-fc2021.herokuapp.com/v1";
 
 export const ApiLogin = (info, callback) => {
   console.log(info);
