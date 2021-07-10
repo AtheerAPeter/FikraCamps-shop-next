@@ -29,7 +29,7 @@ const register = () => {
       console.log(data);
       if (error) return alert(error);
       Cookies.set("user", JSON.stringify(data.user));
-      Router.push("/");
+      Router.push("/login");
     });
   };
 
